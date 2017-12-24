@@ -1,27 +1,7 @@
--- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
---
--- Host: 127.0.0.1    Database: courierdb
--- ------------------------------------------------------
--- Server version	5.7.18-log
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `gm_gen_currency`
---
 
 DROP TABLE IF EXISTS `gm_gen_currency`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `gm_gen_currency` (
   `currencyid` int(11) NOT NULL AUTO_INCREMENT,
   `currencycode` varchar(10) DEFAULT NULL,
@@ -30,11 +10,7 @@ CREATE TABLE `gm_gen_currency` (
   PRIMARY KEY (`currencyid`),
   KEY `idx_currencycode` (`currencycode`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `gm_gen_currency`
---
 
 LOCK TABLES `gm_gen_currency` WRITE;
 /*!40000 ALTER TABLE `gm_gen_currency` DISABLE KEYS */;
@@ -42,9 +18,7 @@ INSERT INTO `gm_gen_currency` VALUES (1,'PHP','Philippine Peso',NULL);
 /*!40000 ALTER TABLE `gm_gen_currency` ENABLE KEYS */;
 UNLOCK TABLES;
 
---
--- Table structure for table `gm_gen_documents`
---
+
 
 DROP TABLE IF EXISTS `gm_gen_documents`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -58,18 +32,14 @@ CREATE TABLE `gm_gen_documents` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `gm_gen_documents`
---
+
 
 LOCK TABLES `gm_gen_documents` WRITE;
 /*!40000 ALTER TABLE `gm_gen_documents` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gm_gen_documents` ENABLE KEYS */;
 UNLOCK TABLES;
 
---
--- Table structure for table `gm_gen_packagetype`
---
+
 
 DROP TABLE IF EXISTS `gm_gen_packagetype`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -85,9 +55,7 @@ CREATE TABLE `gm_gen_packagetype` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `gm_gen_packagetype`
---
+
 
 LOCK TABLES `gm_gen_packagetype` WRITE;
 /*!40000 ALTER TABLE `gm_gen_packagetype` DISABLE KEYS */;
@@ -95,9 +63,7 @@ INSERT INTO `gm_gen_packagetype` VALUES (1,'FP','Full Package',NULL);
 /*!40000 ALTER TABLE `gm_gen_packagetype` ENABLE KEYS */;
 UNLOCK TABLES;
 
---
--- Table structure for table `gm_gen_portaluser`
---
+
 
 DROP TABLE IF EXISTS `gm_gen_portaluser`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -132,14 +98,6 @@ CREATE TABLE `gm_gen_portaluser` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `gm_gen_portaluser`
---
-
-LOCK TABLES `gm_gen_portaluser` WRITE;
-/*!40000 ALTER TABLE `gm_gen_portaluser` DISABLE KEYS */;
-INSERT INTO `gm_gen_portaluser` VALUES (2,'PERSONAL','NAPOCOR','Hernan John','Alipio','alipiohernanjohn@gmail.com','$2y$10$wtzLEbH96jJutYSr.JHEJOVwj.tqXC/4zrjnt5Qoc4t8p1m/A4mqa','Valenzuela City','0926559701',1,NULL,'2017-11-26 13:16:19',NULL,'2017-12-23 05:54:41','Y',NULL,'Y',NULL,NULL,'1514005141.jpg',3,0,0),(3,NULL,NULL,'Hernan John Alipio',NULL,'anne_gemnai_08@yahoo.com',NULL,NULL,NULL,NULL,NULL,'2017-12-04 04:08:42',NULL,'2017-12-04 04:08:42','Y',NULL,NULL,NULL,NULL,'default.jpg',NULL,1,1);
-/*!40000 ALTER TABLE `gm_gen_portaluser` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -252,9 +210,6 @@ DELIMITER ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 
---
--- Table structure for table `gm_gen_vehicletype`
---
 
 DROP TABLE IF EXISTS `gm_gen_vehicletype`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -271,19 +226,11 @@ CREATE TABLE `gm_gen_vehicletype` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `gm_gen_vehicletype`
---
-
 LOCK TABLES `gm_gen_vehicletype` WRITE;
 /*!40000 ALTER TABLE `gm_gen_vehicletype` DISABLE KEYS */;
 INSERT INTO `gm_gen_vehicletype` VALUES (1,'ABC','ABC CAR',100.00,'KG',NULL);
 /*!40000 ALTER TABLE `gm_gen_vehicletype` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `gm_opc_credshared`
---
 
 DROP TABLE IF EXISTS `gm_opc_credshared`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -294,10 +241,6 @@ CREATE TABLE `gm_opc_credshared` (
   `datetimeshared` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `gm_opc_credshared`
---
 
 LOCK TABLES `gm_opc_credshared` WRITE;
 /*!40000 ALTER TABLE `gm_opc_credshared` DISABLE KEYS */;
@@ -341,10 +284,6 @@ DELIMITER ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 
---
--- Table structure for table `gm_opc_pucredibility`
---
-
 DROP TABLE IF EXISTS `gm_opc_pucredibility`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -362,10 +301,6 @@ CREATE TABLE `gm_opc_pucredibility` (
   KEY `idx_documentid` (`documentid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `gm_opc_pucredibility`
---
 
 LOCK TABLES `gm_opc_pucredibility` WRITE;
 /*!40000 ALTER TABLE `gm_opc_pucredibility` DISABLE KEYS */;
@@ -410,10 +345,6 @@ DELIMITER ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 
---
--- Table structure for table `gm_opc_puvehicles`
---
-
 DROP TABLE IF EXISTS `gm_opc_puvehicles`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -428,10 +359,6 @@ CREATE TABLE `gm_opc_puvehicles` (
   PRIMARY KEY (`puvehiclesid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `gm_opc_puvehicles`
---
 
 LOCK TABLES `gm_opc_puvehicles` WRITE;
 /*!40000 ALTER TABLE `gm_opc_puvehicles` DISABLE KEYS */;
@@ -474,10 +401,6 @@ DELIMITER ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 
---
--- Table structure for table `gm_opc_socialaccounts`
---
-
 DROP TABLE IF EXISTS `gm_opc_socialaccounts`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -492,18 +415,10 @@ CREATE TABLE `gm_opc_socialaccounts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `gm_opc_socialaccounts`
---
-
 LOCK TABLES `gm_opc_socialaccounts` WRITE;
 /*!40000 ALTER TABLE `gm_opc_socialaccounts` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gm_opc_socialaccounts` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `gm_sys_tips`
---
 
 DROP TABLE IF EXISTS `gm_sys_tips`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -2619,4 +2534,3 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-12-23 13:58:14
