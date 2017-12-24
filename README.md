@@ -28,9 +28,11 @@ We'd like to extend our deepest gratitude to Hernan John Alipio for helping us i
 Copy the "courier" folder to c:\xamp\htdocs
 
 1. Edit C:\xampp\apache\conf\httpd.conf
+```
    #LoadModule vhost_alias_module modules/mod_vhost_alias.so
       to
    LoadModule vhost_alias_module modules/mod_vhost_alias.so
+```
    
    >simply locate it inside http.conf and remove the # in front
 
@@ -53,7 +55,7 @@ Copy the "courier" folder to c:\xamp\htdocs
 ```
 
 3. Right-Click on Notepad then click 'Run as Administrator'
-
+```
    Click File Menu -> Open
 
    Go to C:\Windows\System32\drivers\etc\hosts
@@ -63,6 +65,7 @@ Copy the "courier" folder to c:\xamp\htdocs
    Then add this line among the hosts:
 
      127.0.0.1	local.courier.dev
+```
 
    >Once this is done, you can access the website using: http://local.courier.dev
    
